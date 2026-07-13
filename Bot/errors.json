@@ -1,0 +1,18 @@
+[
+  {
+    "errorString": "realdebrid > Failed to get instant availability",
+    "solution": "> **The error is a \"403 Forbidden\" when interacting with the Real-Debrid API.**\n> This indicates that the server understands the request but refuses to authorize it.\n> \n> **Possible Reasons:**\n> * **Invalid or Expired API Key:** The most frequent cause. The Real-Debrid API key used in Seanime is likely no longer valid. \n> * **Account Issues:** There could be an issue with the Real-Debrid account itself, such as an expired subscription or a temporary lock."
+  },
+  {
+    "errorString": "executable file not found in %PATH%",
+    "solution": "> **Seanime cannot find the MPV media player.**\n> This happens because MPV is not installed, not in your system’s PATH, or the path is set incorrectly in Seanime’s settings.\n> \n> **How to fix it:**\n> \n> 1. First, ensure MPV is installed: https://thewiki.moe/tutorials/mpv/\n> 2. Then, choose one of these options:\n>    - **Option A:** Add the location of `mpv.exe` to your system’s PATH environment variables.\n>    - **Option B:** In Seanime, go to **Settings → Desktop Media Player → Configuration → MPV** and manually set the correct path to where MPV is installed.\n> \n> After updating, restart Seanime and try again."
+  },
+  {
+    "errorString": "executable file not found in $PATH",
+    "solution": "> **Seanime cannot find ffprobe, which is part of the FFmpeg package.** This happens if:\n> \n> - FFmpeg is not installed, or\n> - Its installation folder is not added to your system’s PATH environment variable.\n> \n> **How to fix it:**\n> \n> First of all make sure FFmpeg is installed on your system. (ffprobe comes bundled with FFmpeg.)\n> \n> - **Option A:** Add the installation folder (the one containing ffmpeg and ffprobe) to your system’s PATH environment variables.\n> \n> - **Option B:** In Seanime, open settings (**Settings → Transcoding / Direct play → FFMPEG**) and manually set the paths to where ffmpeg and ffprobe are located.\n> \n> After updating one of these, restart Seanime and try again."
+  },
+  {
+    "errorString": "bind: Only one usage of each socket address",
+    "solution": "> **Seanime can't open because another process (often another instance of Seanime) is already using its required network port (e.g., 43211), or the previous instance didn’t close cleanly (check the system tray).**\n> \n> **How to fix it:**\n> \n> 1. Find and stop the process that is using the port.\n> - **On Windows:** Open Command Prompt and run `netstat -aon | findstr :43211`. Find the PID (Process ID) in the last column and then run `taskkill /PID <pid> /F` to stop it.\n> \n> - **On Linux/macOS:** Open a terminal and run `sudo lsof -i :43211`. Find the PID and then run `kill -9 <pid>` to stop it.\n> \n> 2. Alternatively, change the Seanime configuration to use a different port that’s available.\n> \n> 3. Restart Seanime."
+  }
+]
