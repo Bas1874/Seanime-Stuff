@@ -14,5 +14,9 @@
   {
     "errorString": "bind: Only one usage of each socket address",
     "solution": "> **Seanime can't open because another process (often another instance of Seanime) is already using its required network port (e.g., 43211), or the previous instance didn’t close cleanly (check the system tray).**\n> \n> **How to fix it:**\n> \n> 1. Find and stop the process that is using the port.\n> - **On Windows:** Open Command Prompt and run `netstat -aon | findstr :43211`. Find the PID (Process ID) in the last column and then run `taskkill /PID <pid> /F` to stop it.\n> \n> - **On Linux/macOS:** Open a terminal and run `sudo lsof -i :43211`. Find the PID and then run `kill -9 <pid>` to stop it.\n> \n> 2. Alternatively, change the Seanime configuration to use a different port that’s available.\n> \n> 3. Restart Seanime."
+  },
+  {
+    "errorString": "promise rejected: map[]",
+    "solution": "test"
   }
 ]
