@@ -17,7 +17,7 @@
   },
   {
     "errorString": "failed to unmarshal marketplace extension",
-    "solution": "> **Seanime encountered an error while trying to read a marketplace extension.** Make sure the link is correct."
+    "solution": "> **Seanime encountered an error while trying to read a marketplace extension.** \n> \n> Make sure the link is correct."
   },
   {
     "errorString": "could not contact torrent client",
